@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./Css/reset_styles.css" />
+    <link rel="stylesheet" href="./Css/variables.css" />
+    <link rel="stylesheet" href="./Css/elements.css" />
+    <link rel="stylesheet" href="./Css/index.css" />
+    <link rel="stylesheet" href="./Css/mediaqueries.css" />
+    <title>DiveSea | NFTs exchange</title>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="#" class="header__logo-link">
+        <img class="header__logo" src="./Assets/Images/logo_black.svg" alt="Logo" />
+      </a>
+      <a href="#" class="header__logo--full-link">
+        <img class="header__logo--full" src="./Assets/Images/logo_black_full.svg" alt="Logo" />
+      </a>
+      <nav class="header__navigation">
+        <a href="#discover" class="header__link link text--18">Discover</a>
+        <a href="#creators" class="header__link link text--18">Creators</a>
+        <a href="#sell" class="header__link link text--18">Sell</a>
+        <a href="#stats" class="header__link link text--18">Stats</a>
+      </nav>
+      <div class="header__group">
+        <div class="header__input input">
+          <svg
+            class="input__icon icon--m"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.94976 17.7296C14.5695 17.7296 18.3146 13.9845 18.3146 9.3648C18.3146 4.74505 14.5695 1 9.94976 1C5.33001 1 1.58496 4.74505 1.58496 9.3648C1.58496 13.9845 5.33001 17.7296 9.94976 17.7296Z"
+              stroke="currentColor"
+              stroke-width="1.79246"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15.9246 15.3398L23.0944 22.5097"
+              stroke="currentColor"
+              stroke-width="1.79246"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input class="input__field" placeholder="Search Art Work / Creator" type="text" />
+        </div>
+        <button class="header__button button button--l button--black">Connect wallet</button>
+      </div>
+      <div id="burger" class="header__burger-menu burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="burgerOverlay" class="burger-menu__overlay">
+        <a href="#discover" class="burger-menu__link link text--46">Discover</a>
+        <a href="#creators" class="burger-menu__link link text--46">Creators</a>
+        <a href="#sell" class="burger-menu__link link text--46">Sell</a>
+        <a href="#stats" class="burger-menu__link link text--46">Stats</a>
+      </div>
+    </header>
+    <main>
+      <section class="welcome container">
+        <div class="welcome__content">
+          <div class="welcome__line"></div>
+          <h1 class="welcome__title title text text--76">Discover And Create NFTs</h1>
+          <p class="welcome__subtitle text text--18">
+            Discover, Create and Sell NFTs On Our NFT Marketplace With Over Thousands Of NFTs And
+            Get a
+            <span>$20 bonus.</span>
+          </p>
+          <div class="welcome__buttons">
+            <button class="button button--black button--l">Explore More</button>
+            <button class="button button--black-border button--l">Create NFT</button>
+          </div>
+          <div class="welcome__statistics">
+            <div class="welcome__statistics-item">
+              <p class="welcome__statistics-item-value text text--36">430K+</p>
+              <p class="welcome__statistics-item-name text text--14">Art Works</p>
+            </div>
+            <div class="welcome__statistics-item">
+              <p class="welcome__statistics-item-value text text--36">159K+</p>
+              <p class="welcome__statistics-item-name text text--14">Creators</p>
+            </div>
+            <div class="welcome__statistics-item">
+              <p class="welcome__statistics-item-value text text--36">87K+</p>
+              <p class="welcome__statistics-item-name text text--14">Collections</p>
+            </div>
+          </div>
+          <div class="welcome__mobile-app">
+            <img
+              class="welcome__mobile-app-trust"
+              src="./Assets/Images/trust-pilot.svg"
+              alt="TrustPilot"
+            />
+            <img class="welcome__mobile-app-rating" src="./Assets/Images/rating.svg" alt="rating" />
+            <p class="welcome__mobile-app-reviews text text--18">4900+</p>
+          </div>
+        </div>
+        <div class="welcome__slider">
+          <div class="welcome__slider-img-wrapper double-img">
+            <img
+              class="double-img__img"
+              id="sliderImg"
+              src="./Assets/Images/Items/1.jpg"
+              alt="NFT"
+            />
+            <img
+              class="double-img__subimg"
+              id="sliderSubImg"
+              src="./Assets/Images/Items/1.jpg"
+              alt="NFT"
+            />
+          </div>
+          <div class="welcome__slider-buttons slider-buttons">
+            <button class="slider-buttons__button" id="sliderPrev">
+              <svg
+                width="27"
+                height="27"
+                viewBox="0 0 27 27"
+                fill="var(--c-gray)"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.2395 8.38988C10.802 7.98608 10.1201 8.01335 9.7163 8.4508L6.23378 12.2235C5.85262 12.6364 5.85262 13.2728 6.23377 13.6857L9.71629 17.4585C10.1201 17.896 10.802 17.9232 11.2395 17.5195C11.6769 17.1157 11.7042 16.4337 11.3004 15.9963L9.48777 14.0325L19.9609 14.0325C20.5562 14.0325 21.0388 13.5499 21.0388 12.9546C21.0388 12.3593 20.5562 11.8767 19.9609 11.8767L9.48781 11.8767L11.3004 9.91307C11.7042 9.47563 11.6769 8.79367 11.2395 8.38988Z"
+                />
+              </svg>
+            </button>
+            <div class="slider-buttons__line"></div>
+            <button class="slider-buttons__button" id="sliderNext">
+              <svg
+                width="27"
+                height="27"
+                viewBox="0 0 27 27"
+                fill="var(--c-gray)"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.7603 8.38988C16.1977 7.98608 16.8797 8.01335 17.2835 8.4508L20.766 12.2235C21.1471 12.6364 21.1471 13.2728 20.766 13.6857L17.2835 17.4585C16.8797 17.896 16.1977 17.9232 15.7603 17.5195C15.3228 17.1157 15.2955 16.4337 15.6993 15.9963L17.512 14.0325L7.03886 14.0325C6.44354 14.0325 5.96094 13.5499 5.96094 12.9546C5.96094 12.3593 6.44354 11.8767 7.03886 11.8767L17.5119 11.8767L15.6993 9.91307C15.2956 9.47563 15.3228 8.79367 15.7603 8.38988Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="weekly-top">
+        <div class="weekly-top__body container">
+          <h2 class="weekly-top__title text text--46">Weekly - Top NFT</h2>
+          <div class="weekly-top__carousel-wrapper">
+            <div class="weekly-top__carousel" id="carousel">
+              <div class="weekly-top__carousel-item carousel-item">
+                <p class="carousel-item__time text text--14">07h 09m 12s</p>
+                <img class="carousel-item__img" src="./Assets/Images/Items/1.jpg" alt="Nft#1" />
+                <p class="carousel-item__name title text text--18">Sun-Glass</p>
+                <div class="carousel-item__footer">
+                  <div class="carousel-item__footer-price">
+                    <p class="carousel-item-price-title text text--14">Current bid</p>
+                    <p class="carousel-item-price-value text text--16">
+                      <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                      1.75
+                    </p>
+                  </div>
+                  <button class="button button--m button--black">Place bid</button>
+                </div>
+              </div>
+              <div class="weekly-top__carousel-item carousel-item">
+                <p class="carousel-item__time text text--14">07h 09m 12s</p>
+                <img class="carousel-item__img" src="./Assets/Images/Items/2.jpg" alt="Nft#1" />
+                <p class="carousel-item__name title text text--18">Sun-Glass</p>
+                <div class="carousel-item__footer">
+                  <div class="carousel-item__footer-price">
+                    <p class="carousel-item-price-title text text--14">Current bid</p>
+                    <p class="carousel-item-price-value text text--16">
+                      <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                      1.75
+                    </p>
+                  </div>
+                  <button class="button button--m button--black">Place bid</button>
+                </div>
+              </div>
+              <div class="weekly-top__carousel-item carousel-item">
+                <p class="carousel-item__time text text--14">07h 09m 12s</p>
+                <img class="carousel-item__img" src="./Assets/Images/Items/3.jpg" alt="Nft#1" />
+                <p class="carousel-item__name title text text--18">Sun-Glass</p>
+                <div class="carousel-item__footer">
+                  <div class="carousel-item__footer-price">
+                    <p class="carousel-item-price-title text text--14">Current bid</p>
+                    <p class="carousel-item-price-value text text--16">
+                      <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                      1.75
+                    </p>
+                  </div>
+                  <button class="button button--m button--black">Place bid</button>
+                </div>
+              </div>
+              <div class="weekly-top__carousel-item carousel-item">
+                <p class="carousel-item__time text text--14">07h 09m 12s</p>
+                <img class="carousel-item__img" src="./Assets/Images/Items/4.jpg" alt="Nft#1" />
+                <p class="carousel-item__name title text text--18">Sun-Glass</p>
+                <div class="carousel-item__footer">
+                  <div class="carousel-item__footer-price">
+                    <p class="carousel-item-price-title text text--14">Current bid</p>
+                    <p class="carousel-item-price-value text text--16">
+                      <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                      1.75
+                    </p>
+                  </div>
+                  <button class="button button--m button--black">Place bid</button>
+                </div>
+              </div>
+              <div class="weekly-top__carousel-item carousel-item">
+                <p class="carousel-item__time text text--14">07h 09m 12s</p>
+                <img class="carousel-item__img" src="./Assets/Images/Items/5.jpg" alt="Nft#1" />
+                <p class="carousel-item__name title text text--18">Sun-Glass</p>
+                <div class="carousel-item__footer">
+                  <div class="carousel-item__footer-price">
+                    <p class="carousel-item-price-title text text--14">Current bid</p>
+                    <p class="carousel-item-price-value text text--16">
+                      <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                      1.75
+                    </p>
+                  </div>
+                  <button class="button button--m button--black">Place bid</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="weekly-top__carousel-buttons slider-buttons">
+            <button class="slider-buttons__button" id="carouselBack">
+              <svg
+                width="27"
+                height="27"
+                viewBox="0 0 27 27"
+                fill="var(--c-gray)"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.2395 8.38988C10.802 7.98608 10.1201 8.01335 9.7163 8.4508L6.23378 12.2235C5.85262 12.6364 5.85262 13.2728 6.23377 13.6857L9.71629 17.4585C10.1201 17.896 10.802 17.9232 11.2395 17.5195C11.6769 17.1157 11.7042 16.4337 11.3004 15.9963L9.48777 14.0325L19.9609 14.0325C20.5562 14.0325 21.0388 13.5499 21.0388 12.9546C21.0388 12.3593 20.5562 11.8767 19.9609 11.8767L9.48781 11.8767L11.3004 9.91307C11.7042 9.47563 11.6769 8.79367 11.2395 8.38988Z"
+                />
+              </svg>
+            </button>
+            <div class="slider-buttons__line"></div>
+            <button class="slider-buttons__button" id="carouselForward">
+              <svg
+                width="27"
+                height="27"
+                viewBox="0 0 27 27"
+                fill="var(--c-gray)"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.7603 8.38988C16.1977 7.98608 16.8797 8.01335 17.2835 8.4508L20.766 12.2235C21.1471 12.6364 21.1471 13.2728 20.766 13.6857L17.2835 17.4585C16.8797 17.896 16.1977 17.9232 15.7603 17.5195C15.3228 17.1157 15.2955 16.4337 15.6993 15.9963L17.512 14.0325L7.03886 14.0325C6.44354 14.0325 5.96094 13.5499 5.96094 12.9546C5.96094 12.3593 6.44354 11.8767 7.03886 11.8767L17.5119 11.8767L15.6993 9.91307C15.2956 9.47563 15.3228 8.79367 15.7603 8.38988Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="top-collection container">
+        <img
+          class="top-collection__recent-viewed"
+          src="./Assets/Images/recent_viewed.png"
+          alt="Recent viewed"
+        />
+        <h2 class="top-collection__title title text text--46">Top Collection</h2>
+        <div class="top-collection__labels">
+          <p class="top-collection__label text text--18">Collection</p>
+          <p class="top-collection__label text text--18">Volume</p>
+          <p class="top-collection__label text text--18">24h %</p>
+          <p class="top-collection__label text text--18">Floor Price</p>
+          <p class="top-collection__label text text--18">Owners</p>
+          <p class="top-collection__label text text--18">Items</p>
+        </div>
+        <div class="top-collection__list">
+          <div class="top-collection__list-item">
+            <div class="top-collection__list-item-info">
+              <img
+                class="top-collection__list-item-avatar"
+                src="./Assets/Images/Items/1.jpg"
+                alt="Avatar"
+              />
+              <div class="top-collection__list-item-info-text">
+                <p class="top-collection__list-item-title text title text--18">Alex Ca.</p>
+                <p class="top-collection__list-item-name text text--16">By Alex</p>
+              </div>
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,456
+            </div>
+            <div
+              class="top-collection__list-item-cell top-collection__list-item-cell--green text text--18"
+            >
+              + 27.78%
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,4
+            </div>
+            <div class="top-collection__list-item-cell text text--18">2.2K</div>
+            <div class="top-collection__list-item-cell text text--18">900</div>
+          </div>
+          <div class="top-collection__list-item">
+            <div class="top-collection__list-item-info">
+              <img
+                class="top-collection__list-item-avatar"
+                src="./Assets/Images/Items/1.jpg"
+                alt="Avatar"
+              />
+              <div class="top-collection__list-item-info-text">
+                <p class="top-collection__list-item-title text title text--18">Alex Ca.</p>
+                <p class="top-collection__list-item-name text text--16">By Alex</p>
+              </div>
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,456
+            </div>
+            <div
+              class="top-collection__list-item-cell top-collection__list-item-cell--green text text--18"
+            >
+              + 27.78%
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,4
+            </div>
+            <div class="top-collection__list-item-cell text text--18">2.2K</div>
+            <div class="top-collection__list-item-cell text text--18">900</div>
+          </div>
+          <div class="top-collection__list-item">
+            <div class="top-collection__list-item-info">
+              <img
+                class="top-collection__list-item-avatar"
+                src="./Assets/Images/Items/1.jpg"
+                alt="Avatar"
+              />
+              <div class="top-collection__list-item-info-text">
+                <p class="top-collection__list-item-title text title text--18">Alex Ca.</p>
+                <p class="top-collection__list-item-name text text--16">By Alex</p>
+              </div>
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,456
+            </div>
+            <div
+              class="top-collection__list-item-cell top-collection__list-item-cell--green text text--18"
+            >
+              + 27.78%
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,4
+            </div>
+            <div class="top-collection__list-item-cell text text--18">2.2K</div>
+            <div class="top-collection__list-item-cell text text--18">900</div>
+          </div>
+          <div class="top-collection__list-item">
+            <div class="top-collection__list-item-info">
+              <img
+                class="top-collection__list-item-avatar"
+                src="./Assets/Images/Items/1.jpg"
+                alt="Avatar"
+              />
+              <div class="top-collection__list-item-info-text">
+                <p class="top-collection__list-item-title text title text--18">Alex Ca.</p>
+                <p class="top-collection__list-item-name text text--16">By Alex</p>
+              </div>
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,456
+            </div>
+            <div
+              class="top-collection__list-item-cell top-collection__list-item-cell--green text text--18"
+            >
+              + 27.78%
+            </div>
+            <div class="top-collection__list-item-cell text text--18">
+              <img class="icon--l" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+              8,4
+            </div>
+            <div class="top-collection__list-item-cell text text--18">2.2K</div>
+            <div class="top-collection__list-item-cell text text--18">900</div>
+          </div>
+        </div>
+        <div class="top-collection__link-wrapper explore-all-link">
+          <a href="#" class="explore-all-link__body link text--18">
+            <p>Explore All</p>
+            <svg
+              class="icon--s"
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.25293 8.35107H15.2177"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.23389 1.3667L15.2163 8.34908L8.23389 15.3315"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="explore-marketplace container">
+        <h2 class="explore-marketplace__title title text text--46">Explore Marketplace</h2>
+        <nav class="explore-marketplace__filter-options">
+          <a
+            href="#"
+            class="button button--m button--black-border explore-marketplace__filter-option"
+          >
+            All
+          </a>
+          <a
+            href="#"
+            class="button button--m button--black-border explore-marketplace__filter-option"
+          >
+            <img src="./Assets/Icons/Filters/category.svg" alt="Category" />
+            Category
+          </a>
+          <a
+            href="#"
+            class="button button--m button--black-border explore-marketplace__filter-option"
+          >
+            <img src="./Assets/Icons/Filters/collection.svg" alt="Collection" />
+            Collection
+          </a>
+          <a
+            href="#"
+            class="button button--m button--black-border explore-marketplace__filter-option"
+          >
+            <img src="./Assets/Icons/Filters/price.svg" alt="Price" />
+            Price
+          </a>
+        </nav>
+        <div class="explore-marketplace__list">
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/1.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/2.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/3.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/4.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/1.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/2.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/3.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+          <div class="explore-marketplace__list-item carousel-item">
+            <p class="carousel-item__time text text--14">07h 09m 12s</p>
+            <img class="carousel-item__img" src="./Assets/Images/Items/4.jpg" alt="Nft#1" />
+            <p class="carousel-item__name title text text--18">Sun-Glass</p>
+            <div class="carousel-item__footer">
+              <div class="carousel-item__footer-price">
+                <p class="carousel-item-price-title text text--14">Current bid</p>
+                <p class="carousel-item-price-value text text--16">
+                  <img class="icon--m" src="./Assets/Icons/crystall_black.svg" alt="Crystall" />
+                  1.75
+                </p>
+              </div>
+              <button class="button button--m button--black">Place bid</button>
+            </div>
+          </div>
+        </div>
+        <div class="explore-marketplace__link-wrapper explore-all-link">
+          <a href="#" class="explore-all-link__body link text--18">
+            <p>Explore All</p>
+            <svg
+              class="icon--s"
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.25293 8.35107H15.2177"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.23389 1.3667L15.2163 8.34908L8.23389 15.3315"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="honors container">
+        <div class="honors__text">
+          <h2 class="honors__title title text text--46">
+            <span>Just Unleash -</span>
+            Your Inner Collector
+          </h2>
+          <ul class="honors__list">
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              Best Seller All Around World
+            </li>
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              $2M+ Transections Every Day
+            </li>
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              Secure Transactions
+            </li>
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              Exclusive Collections From Sellers
+            </li>
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              Easy Buying and Selling
+            </li>
+            <li class="honors__list-item text text--16">
+              <img class="icon--m" src="./Assets/Icons/checkmark.svg" alt="Checkmark" />
+              Join Our Community
+            </li>
+          </ul>
+          <button class="honors__button button button--black button--l">
+            Explore More
+            <svg
+              class="icon--s"
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.25293 8.35107H15.2177"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.23389 1.3667L15.2163 8.34908L8.23389 15.3315"
+                stroke="currentColor"
+                stroke-width="1.99471"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <img class="honors__img" src="./Assets/Images/reviews.png" alt="Reviews" />
+      </section>
+      <section class="create-sell container">
+        <div class="create-sell__body">
+          <div class="create-sell__group">
+            <div class="create-sell__text">
+              <h2 class="create-sell__title text text--46">Create and Sell NFTs</h2>
+              <h3 class="create-sell__subtitle text text--18">World’s Largest NFT Place</h3>
+            </div>
+            <div class="create-sell__buttons">
+              <button class="button button--l button--white">Explore More</button>
+              <button class="button button--l button--white-border">Sell Artwork</button>
+            </div>
+          </div>
+          <div class="create-sell__img-wrapper double-img double-img--xs">
+            <img class="double-img__img" src="./Assets/Images/Items/1.jpg" alt="NFT" />
+            <img class="double-img__subimg" src="./Assets/Images/Items/1.jpg" alt="NFT" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__body container">
+        <a href="#" class="footer__logo-wrapper">
+          <img class="footer__logo" src="./Assets/Images/logo_full.svg" alt="Logo" />
+        </a>
+        <nav class="footer__links">
+          <a class="footer__link link text--18" href="#">Privacy Policy</a>
+          <a class="footer__link link text--18" href="#">Term & Conditions</a>
+          <a class="footer__link link text--18" href="#">About Us</a>
+          <a class="footer__link link text--18" href="#">Contact</a>
+        </nav>
+        <p class="footer__copyright text text--18">© 2023 EATLY All Rights Reserved.</p>
+        <nav class="footer__socials">
+          <a class="footer__social-link" href="#" aria-label="Twitter">
+            <img class="icon--m" src="./Assets/Icons/Socials/twitter.svg" alt="Twitter" />
+          </a>
+          <a class="footer__social-link" href="#" aria-label="Instagram">
+            <img class="icon--m" src="./Assets/Icons/Socials/instagram.svg" alt="Instagram" />
+          </a>
+          <a class="footer__social-link" href="#">
+            <img
+              class="icon--m"
+              src="./Assets/Icons/Socials/linkedin.svg"
+              aria-label="LinkedIn"
+              alt="LinkedIn"
+            />
+          </a>
+          <a class="footer__social-link" href="#" aria-label="Facebook">
+            <img class="icon--m" src="./Assets/Icons/Socials/facebook.svg" alt="Facebook" />
+          </a>
+        </nav>
+        <div class="footer__line"></div>
+      </div>
+    </footer>
+    <script src="./Js/burgerMenu.js"></script>
+    <script src="./Js/carousel.js"></script>
+    <script src="./Js/slider.js"></script>
+  </body>
+</html>

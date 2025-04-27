@@ -1,0 +1,12 @@
+body {
+  --c-black: #141416;
+  --c-gray: #676767;
+  --c-gray-light: #b9b9b9;
+  --c-gray-dark: #4d4d4d;
+  --c-gray-cloud: #ededed;
+  --c-white: #fff;
+  --c-white-ice: #fcfcfd;
+  --c-green: #10c352;
+  --c-red: #e23333;
+  --container-padding: 20px;
+}
