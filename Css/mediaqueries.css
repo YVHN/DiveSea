@@ -1,3 +1,28 @@
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    border-color: currentColor;
+    color: #58adc0;
+  }
+
+  .slider-buttons__button:hover {
+    svg {
+      fill: var(--c-black);
+    }
+
+    background-color: rgba(0 0 0 / 0.05);
+  }
+
+  .link:hover {
+    color: #58adc0;
+    border-color: currentColor;
+  }
+
+  .input:hover {
+    color: var(--c-black);
+    border-color: #58adc0;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 890px;

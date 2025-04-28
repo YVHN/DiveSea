@@ -11,11 +11,6 @@
   background-color: transparent;
   border: 1px solid transparent;
   transition: border-color 0.15s ease, color 0.15s ease;
-
-  &:hover {
-    border-color: #58adc0;
-    color: #58adc0;
-  }
 }
 
 .button--m {
@@ -33,41 +28,21 @@
 .button--black {
   color: var(--c-white);
   background-color: var(--c-black);
-
-  &:hover {
-    border-color: #58adc0;
-    color: #58adc0;
-  }
 }
 
 .button--black-border {
   color: var(--c-black);
   border-color: var(--c-black);
-
-  &:hover {
-    border-color: #58adc0;
-    color: #58adc0;
-  }
 }
 
 .button--white {
   color: var(--c-black);
   background-color: var(--c-white);
-
-  &:hover {
-    border-color: #58adc0;
-    color: #58adc0;
-  }
 }
 
 .button--white-border {
   color: var(--c-white);
   border: 1px solid var(--c-white);
-
-  &:hover {
-    border-color: #58adc0;
-    color: #58adc0;
-  }
 }
 
 .link {
@@ -76,11 +51,6 @@
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
   transition: border-color 0.15s ease, color 0.15s ease;
-
-  &:hover {
-    color: #58adc0;
-    border-color: currentColor;
-  }
 }
 
 .input {
@@ -95,11 +65,6 @@
   font-family: Poppins;
   border: 1px solid transparent;
   transition: background-color 0.15s ease, border-color 0.15s ease;
-
-  &:hover {
-    color: var(--c-black);
-    border-color: #58adc0;
-  }
 }
 
 .input__icon {
@@ -233,14 +198,6 @@
     width: 26px;
     height: 26px;
     transition: fill 0.15s ease;
-  }
-
-  &:hover {
-    svg {
-      fill: var(--c-black);
-    }
-
-    background-color: rgba(0 0 0 / 0.05);
   }
 
   &:active {
