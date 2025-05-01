@@ -1,11 +1,11 @@
-const forwardBtnEl = document.querySelector('#carouselForward');
-const backBtnEl = document.querySelector('#carouselBack');
-const carouselEl = document.querySelector('#carousel');
+const forwardBtnEl = document.querySelector("#carouselForward");
+const backBtnEl = document.querySelector("#carouselBack");
+const carouselEl = document.querySelector("#carousel");
+const carouselWrapperEl = document.querySelector("#carouselWrapper");
 
 const gap = 28;
 const itemsLength = 5;
 
-// Расчёт ширины одного айтема:
 function getItemWidth() {
   const carouselWidth = carouselEl.clientWidth;
   return (carouselWidth - (itemsLength - 1) * gap) / itemsLength;
@@ -15,31 +15,48 @@ let imgIndex = 0;
 
 function updateCarousel() {
   const itemWidth = getItemWidth();
-  console.log(itemWidth);
   const moveStep = itemWidth + gap;
   const translateX = -(imgIndex * moveStep);
   carouselEl.style.transform = `translateX(${translateX}px)`;
+  console.log("index:", imgIndex);
 }
 
-forwardBtnEl.addEventListener('click', () => {
-  imgIndex++;
-
-  if (imgIndex >= itemsLength) {
-    imgIndex = 0;
-  }
-
+forwardBtnEl.addEventListener("click", () => {
+  imgIndex = (imgIndex + 1) % itemsLength;
   updateCarousel();
 });
 
-backBtnEl.addEventListener('click', () => {
-  imgIndex--;
-
-  if (imgIndex < 0) {
-    imgIndex = itemsLength - 1;
-  }
-
+backBtnEl.addEventListener("click", () => {
+  imgIndex = (imgIndex - 1 + itemsLength) % itemsLength;
   updateCarousel();
 });
 
-// Чтобы при загрузке страницы всё посчиталось правильно:
+// 📱 Свайп
+let touchStartX = 0;
+let touchEndX = 0;
+
+carouselWrapperEl.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].clientX;
+});
+
+carouselWrapperEl.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+
+  if (touchEndX < touchStartX - swipeThreshold) {
+    // свайп влево (вперёд)
+    imgIndex = (imgIndex + 1) % itemsLength;
+    updateCarousel();
+  } else if (touchEndX > touchStartX + swipeThreshold) {
+    // свайп вправо (назад)
+    imgIndex = (imgIndex - 1 + itemsLength) % itemsLength;
+    updateCarousel();
+  }
+}
+
+// Инициализация
 updateCarousel();
